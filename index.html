@@ -122,10 +122,11 @@
         crossorigin="anonymous"></script>
     <script>
         $(window).on('load', function (event) {
-            parent.postMessage({
-                monthHeight: $('body').height()
-            }, '*')
-        });
+			parent.postMessage({
+				height: $('body').height(),
+				location: location.href
+			}, '*')
+		});
     </script>
 </body>
 
